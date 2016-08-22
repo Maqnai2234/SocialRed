@@ -1,0 +1,13 @@
+%header.mdl-layout__header.mdl-layout__header--scroll
+  .mdl-layout__header-row
+    %span.mdl-layout-title SocialRed
+    .mdl-layout-spacer
+    %nav.mdl-navigation
+      -if user_signed_in?
+        =link_to "Cerrar sesión", destroy_user_session_path, class: "mdl-navigation__link", method: :delete
+
+.mdl-layout__drawer
+  %span.mdl-layout-title SocialRed
+  %nav.mdl-navigation
+    -if user_signed_in?
+      =link_to "Cerrar sesión", destroy_user_session_path, class: "mdl-navigation__link", method: :delete

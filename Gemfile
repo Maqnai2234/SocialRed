@@ -30,10 +30,13 @@ gem 'jbuilder', '~> 2.5'
 # gem 'capistrano-rails', group: :development
 
 # Haml to Html
-gem 'haml-rails', '~> 0.9.0'
+gem 'haml-rails'
 
 #User Autentication
 gem 'devise', '~> 4.2'
+
+#Omniath
+gem 'omniauth-facebook', '~> 4.0'
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platform: :mri
