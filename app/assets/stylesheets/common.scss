@@ -11,12 +11,23 @@ html,body{
 .big-padding{
   padding: 2em 1.5em;
 }
+.full-width{
+  width: 100%;
+}
 .top-space{
   margin-top: 1em;
+}
+.remove-bullet-points{
+  list-style-type: none;
+  margin:0;
 }
 .underline{
   text-decoration: underline;
 }
+.text-right{
+  text-align: right;
+}
+
 .text-left{
   text-align: left;
 }

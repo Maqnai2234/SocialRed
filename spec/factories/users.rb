@@ -23,10 +23,10 @@
 #  updated_at             :datetime         not null
 #
 
-require 'test_helper'
+FactoryGirl.define do
+  factory :user do
+    password "12345678"
+    sequence(:email){ |n| "dummy_#{n}@factory.com"}
 
-class UserTest < ActiveSupport::TestCase
-  # test "the truth" do
-  #   assert true
-  # end
+  end
 end
