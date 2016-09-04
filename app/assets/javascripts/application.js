@@ -12,5 +12,8 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require best_in_place
+//= require best_in_place.jquery-ui
+//= require jquery.remotipart
 //= require turbolinks
 //= require_tree .

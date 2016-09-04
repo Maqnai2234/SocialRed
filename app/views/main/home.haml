@@ -10,5 +10,7 @@
                 %li=link_to "Sugerencias", "#"
           .col-xs-10.col-sm
             .box
-              =render "posts/form"
+              .white.large-padding
+                =render "posts/form"
               #posts
+                =render @posts

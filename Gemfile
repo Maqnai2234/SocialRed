@@ -31,6 +31,10 @@ gem 'jbuilder', '~> 2.5'
 
 gem 'annotate', '~> 2.7', '>= 2.7.1'
 
+gem 'remotipart', github: 'mshibuya/remotipart', ref: '88d9a7d'
+
+gem 'aasm', '~> 4.11'
+
 # Haml to Html
 gem 'haml-rails'
 
@@ -39,6 +43,14 @@ gem 'devise', '~> 4.2'
 
 #Omniath
 gem 'omniauth-facebook', '~> 4.0'
+
+#Best_in_place
+gem 'best_in_place', '~> 3.1'
+
+#PaperClip
+gem 'paperclip', '~> 5.1'
+
+gem 'draper', '~> 3.0.0.pre1'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
