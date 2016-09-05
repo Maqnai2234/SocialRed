@@ -11,4 +11,11 @@
 
 class Post < ApplicationRecord
   belongs_to :user
+  scope :nuevos, -> {order("created_at DESC")}
+
+  def self.all_for_user(user)
+    Post.where(user_id: user.id)
+        .or(Post.where(user_id: user.friend_ids ))
+        .or(Post.where(user_id: user.user_ids ))
+  end
 end

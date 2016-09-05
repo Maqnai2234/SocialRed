@@ -1,7 +1,7 @@
 FactoryGirl.define do
   factory :friendship do
-    user nil
-    friend nil
+    association :user, factory: :user
+    association :friend, factory: :user
     status "MyString"
   end
 end

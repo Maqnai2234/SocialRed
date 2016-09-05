@@ -41,6 +41,8 @@ gem 'haml-rails'
 #User Autentication
 gem 'devise', '~> 4.2'
 
+gem 'will_paginate'
+
 #Omniath
 gem 'omniauth-facebook', '~> 4.0'
 

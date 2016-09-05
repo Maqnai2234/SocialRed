@@ -1,11 +1,12 @@
 %header.mdl-layout__header.mdl-layout__header--scroll
   .mdl-layout__header-row
-    %span.mdl-layout-title SocialRed
+    %span.mdl-layout-title=link_to "SocialRed", root_path ,class: "white-text",style: "text-decoration:none;"
     .mdl-layout-spacer
     %nav.mdl-navigation
       -if user_signed_in?
-        =link_to "Cerrar sesión", destroy_user_session_path, class: "mdl-navigation__link", method: :delete
-
+        =link_to "Mis amigos", friendships_path, class: "mdl-navigation__link white-text"
+        =link_to current_user.username, current_user, class: "mdl-navigation__link white-text"
+        =link_to "Cerrar sesión", destroy_user_session_path, class: "mdl-navigation__link white-text", method: :delete
 .mdl-layout__drawer
   %span.mdl-layout-title SocialRed
   %nav.mdl-navigation

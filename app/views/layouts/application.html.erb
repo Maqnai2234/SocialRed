@@ -11,14 +11,18 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
   <body>
+    <div id="global-snackbar" class="mdl-js-snackbar mdl-snackbar">
+      <div class="mdl-snackbar__text"></div>
+      <button class="mdl-snackbar__action" type="button"></button>
+    </div>
+    <p style="<%= 'display:none;' if notice.nil? && alert.nil? %>">
+      <%= notice %><%= alert %>
+    </p>
     <div class="mdl-layout mdl-js-layout">
       <%= render 'partials/nav' %>
       <main class="mdl-layout__content">
         <div class="page-content"><%= yield %></div>
       </main>
     </div>
-    <p style="<%= 'display:none;' if notice.nil? && alert.nil? %>">
-      <%= notice %><%= alert %>
-    </p>
   </body>
 </html>

@@ -15,8 +15,10 @@
                   %span= best_in_place_if current_user == @user, @user ,:last_name
                   %span= best_in_place_if current_user == @user, @user ,:username
             .col-xs-4.col-sm-2
-              .box
-
+              -unless @are_friends
+                .box
+                  =button_to friendships_path(friend_id: @user.id),class: "mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect", remote: true do
+                    %i.material-icons person_add
         .large-padding
           .row
             .col-xs
